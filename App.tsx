@@ -1,10 +1,6 @@
-import React from 'react';
-import { SingIn } from './src/Screens/SingIn/index';
+import React from 'react'
+import { SingIn } from './src/screens/SingIn/index'
 
 export default function App() {
-  return (
-    <SingIn />
-  );
+  return <SingIn />
 }
-
-
