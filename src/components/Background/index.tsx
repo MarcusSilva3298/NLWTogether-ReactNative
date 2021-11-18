@@ -9,7 +9,7 @@ type Proprs = {
 }
 
 export function Background({ children }: Proprs) {
-  const { secondary80, secondary100 } = theme.colors
+  const { secondary80, secondary100, primary } = theme.colors
 
   return (
     <LinearGradient

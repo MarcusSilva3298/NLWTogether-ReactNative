@@ -4,31 +4,19 @@ import { theme } from '../../global/styles/theme'
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1
-  },
-  banner: {
     width: '100%',
-    height: 234,
-    marginBottom: 30
-  },
-  bannerContent: {
-    flex: 1,
-    justifyContent: 'flex-end',
+    height: 104,
+    paddingTop: getStatusBarHeight(),
     paddingHorizontal: 24,
-    marginBottom: 38
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   title: {
-    fontSize: 28,
+    flex: 1,
+    textAlign: 'center',
     fontFamily: theme.fonts.title700,
+    fontSize: 20,
     color: theme.colors.heading
-  },
-  subtitle: {
-    fontSize: 13,
-    fontFamily: theme.fonts.text400,
-    color: theme.colors.heading
-  },
-  members: {
-    marginLeft: 24,
-    marginTop: 27
   }
 })

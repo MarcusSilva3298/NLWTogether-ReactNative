@@ -4,6 +4,9 @@ import { createStackNavigator } from '@react-navigation/stack'
 import { Home } from '../screens/Home'
 import { SingIn } from '../screens/SingIn'
 
+import { theme } from '../global/styles/theme'
+import { AppointmentDetails } from '../screens/AppointmentDetails'
+
 const { Navigator, Screen } = createStackNavigator()
 
 export function AuthRoutes() {
@@ -11,12 +14,16 @@ export function AuthRoutes() {
     <Navigator
       screenOptions={{
         headerShown: false,
-        cardStyle: { backgroundColor: 'transparent' }
+        cardStyle: { backgroundColor: theme.colors.secondary80 }
       }}
-      defaultScreenOptions={{ cardStyle: { backgroundColor: 'transparent' } }}
     >
       <Screen name="SingIn" key="SingIn" component={SingIn} />
       <Screen name="Home" key="Home" component={Home} />
+      <Screen
+        name="AppointmentDetails"
+        key="AppointmentDetails"
+        component={AppointmentDetails}
+      />
     </Navigator>
   )
 }

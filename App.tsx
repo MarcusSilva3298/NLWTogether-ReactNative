@@ -1,6 +1,6 @@
 import React from 'react'
 import AppLoading from 'expo-app-loading'
-import { StatusBar } from 'react-native'
+import { StatusBar, View } from 'react-native'
 
 import { useFonts } from 'expo-font'
 import { Inter_400Regular, Inter_500Medium } from '@expo-google-fonts/inter'
@@ -30,8 +30,8 @@ export default function App() {
         translucent
       />
 
-      {/* <Routes /> */}
-      <AppointmentDetails />
+      <Routes />
+      {/* <AppointmentDetails /> */}
     </Background>
   )
 }
