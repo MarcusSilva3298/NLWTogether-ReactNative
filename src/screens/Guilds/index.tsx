@@ -23,6 +23,37 @@ export function Guilds({ handleGuildSelected }: Props) {
       name: 'Legendários',
       icon: null,
       owner: false
+    },
+    {
+      id: '3',
+      name: 'SledgHammer',
+      icon: null,
+      owner: false
+    },
+
+    {
+      id: '4',
+      name: 'Sleeping Lotus',
+      icon: null,
+      owner: false
+    },
+    {
+      id: '5',
+      name: 'Premier',
+      icon: null,
+      owner: false
+    },
+    {
+      id: '6',
+      name: 'Wind',
+      icon: null,
+      owner: false
+    },
+    {
+      id: '7',
+      name: 'M1R4',
+      icon: null,
+      owner: false
     }
   ]
 
@@ -34,6 +65,7 @@ export function Guilds({ handleGuildSelected }: Props) {
         renderItem={({ item }) => (
           <Guild data={item} onPress={() => handleGuildSelected(item)} />
         )}
+        contentContainerStyle={{ paddingBottom: 35 }}
         ItemSeparatorComponent={() => <ListDivider />}
         showsVerticalScrollIndicator={false}
         style={styles.guilds}

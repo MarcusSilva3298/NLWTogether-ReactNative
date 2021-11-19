@@ -10,7 +10,8 @@ export const styles = StyleSheet.create({
   label: {
     fontSize: 18,
     fontFamily: theme.fonts.title700,
-    color: theme.colors.heading
+    color: theme.colors.heading,
+    marginBottom: 12
   },
   form: {
     paddingHorizontal: 24,
@@ -62,5 +63,10 @@ export const styles = StyleSheet.create({
   footer: {
     marginVertical: 20,
     marginBottom: 56
+  },
+  descLabel: {
+    fontSize: 18,
+    fontFamily: theme.fonts.title700,
+    color: theme.colors.heading
   }
 })

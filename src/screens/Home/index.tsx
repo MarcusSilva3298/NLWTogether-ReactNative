@@ -39,6 +39,66 @@ export function Home() {
       category: '1',
       date: '23/06 às 20:40h',
       description: 'CSzinho de leve'
+    },
+    {
+      id: '3',
+      guild: {
+        id: '3',
+        name: 'SledgHammer',
+        icon: null,
+        owner: false
+      },
+      category: '1',
+      date: '24/06 às 23:40h',
+      description: 'Hammerizou'
+    },
+    {
+      id: '4',
+      guild: {
+        id: '4',
+        name: 'Sleeping Lotus',
+        icon: null,
+        owner: false
+      },
+      category: '1',
+      date: '01/07 às 20:00h',
+      description: 'Best internacional clan'
+    },
+    {
+      id: '5',
+      guild: {
+        id: '5',
+        name: 'Premier',
+        icon: null,
+        owner: false
+      },
+      category: '1',
+      date: '30/06 às 22:40h',
+      description: 'MDChefe pae'
+    },
+    {
+      id: '6',
+      guild: {
+        id: '6',
+        name: 'Wind',
+        icon: null,
+        owner: false
+      },
+      category: '1',
+      date: '32/06 às 20:40h',
+      description: 'Wind of Change'
+    },
+    {
+      id: '7',
+      guild: {
+        id: '7',
+        name: 'M1R4',
+        icon: null,
+        owner: false
+      },
+      category: '1',
+      date: '19/06 às 21:40h',
+      description: 'Farm de Dr4c0s'
     }
   ]
 
@@ -49,23 +109,26 @@ export function Home() {
   const navigation = useNavigation()
 
   return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <Profile />
-        <ButtonAdd
-          onPress={() => navigation.navigate('AppointmentCreate' as never)}
-        />
-      </View>
+    <Background>
+      <View style={styles.container}>
+        <View style={styles.header}>
+          <Profile />
+          <ButtonAdd
+            onPress={() => navigation.navigate('AppointmentCreate' as never)}
+          />
+        </View>
 
-      <View>
-        <CategorySelect
-          categorySelected={category}
-          setCategory={handleCategorySelect}
-        />
-      </View>
+        <View>
+          <CategorySelect
+            categorySelected={category}
+            setCategory={handleCategorySelect}
+          />
+        </View>
 
-      <View style={styles.content}>
-        <ListHeader title="Partidas agendadas" subtitle="Total 6" />
+        <View style={styles.content}>
+          <ListHeader title="Partidas agendadas" subtitle="Total 6" />
+        </View>
+
         <FlatList
           data={appointments}
           keyExtractor={(item) => item.id}
@@ -75,11 +138,12 @@ export function Home() {
               onPress={() => navigation.navigate('AppointmentDetails' as never)}
             />
           )}
+          contentContainerStyle={{ paddingBottom: 35 }}
           style={styles.matches}
           showsVerticalScrollIndicator={false}
           ItemSeparatorComponent={() => <ListDivider />}
         />
       </View>
-    </View>
+    </Background>
   )
 }

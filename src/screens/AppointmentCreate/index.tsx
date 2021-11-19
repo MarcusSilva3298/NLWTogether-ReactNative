@@ -38,6 +38,10 @@ export function AppointmentCreate() {
     setOpenGuildsModal(false)
   }
 
+  function handleCloseModal() {
+    setOpenGuildsModal(false)
+  }
+
   return (
     <Background>
       <KeyboardAvoidingView
@@ -106,7 +110,7 @@ export function AppointmentCreate() {
               </View>
             </View>
             <View style={[styles.field, { marginBottom: 12 }]}>
-              <Text style={styles.label}>Descrição</Text>
+              <Text style={styles.descLabel}>Descrição</Text>
               <Text style={styles.caracteresLimit}>Max 100 caracteres</Text>
             </View>
             <TextArea
@@ -122,7 +126,7 @@ export function AppointmentCreate() {
         </ScrollView>
 
         <TouchableWithoutFeedback>
-          <ModalView visible={openGuildsModal}>
+          <ModalView visible={openGuildsModal} closeModal={handleCloseModal}>
             <Guilds handleGuildSelected={handleGuildSelect} />
           </ModalView>
         </TouchableWithoutFeedback>
