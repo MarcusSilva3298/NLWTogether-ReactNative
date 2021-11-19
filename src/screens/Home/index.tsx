@@ -52,7 +52,9 @@ export function Home() {
     <View style={styles.container}>
       <View style={styles.header}>
         <Profile />
-        <ButtonAdd />
+        <ButtonAdd
+          onPress={() => navigation.navigate('AppointmentCreate' as never)}
+        />
       </View>
 
       <View>

@@ -6,6 +6,7 @@ import { SingIn } from '../screens/SingIn'
 
 import { theme } from '../global/styles/theme'
 import { AppointmentDetails } from '../screens/AppointmentDetails'
+import { AppointmentCreate } from '../screens/AppointmentCreate'
 
 const { Navigator, Screen } = createStackNavigator()
 
@@ -23,6 +24,11 @@ export function AuthRoutes() {
         name="AppointmentDetails"
         key="AppointmentDetails"
         component={AppointmentDetails}
+      />
+      <Screen
+        name="AppointmentCreate"
+        key="AppointmentCreate"
+        component={AppointmentCreate}
       />
     </Navigator>
   )
