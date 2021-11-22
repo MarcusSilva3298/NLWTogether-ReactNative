@@ -1,4 +1,5 @@
 import { Feather } from '@expo/vector-icons'
+import { LinearGradient } from 'expo-linear-gradient'
 import React from 'react'
 import {
   Text,
@@ -23,18 +24,23 @@ type Props = TouchableOpacityProps & {
 }
 
 export function Guild({ data, ...rest }: Props) {
+  const { secondary50, secondary70 } = theme.colors
+
   return (
     <TouchableOpacity style={styles.container} activeOpacity={0.7} {...rest}>
-      <GuildIcon />
+      <LinearGradient
+        style={styles.guildIcon}
+        colors={[secondary50, secondary70]}
+      >
+        <GuildIcon />
+      </LinearGradient>
 
       <View style={styles.content}>
-        <View>
-          <Text style={styles.title}>{data.name}</Text>
+        <Text style={styles.title}>{data.name}</Text>
 
-          <Text style={styles.type}>
-            {data.owner ? 'Administrador' : 'Convidado'}
-          </Text>
-        </View>
+        <Text style={styles.type}>
+          {data.owner ? 'Administrador' : 'Convidado'}
+        </Text>
       </View>
       <Feather name="chevron-right" color={theme.colors.heading} syze={24} />
     </TouchableOpacity>

@@ -9,6 +9,7 @@ import { Rajdhani_500Medium, Rajdhani_700Bold } from '@expo-google-fonts/rajdhan
 import { Routes } from './src/routes'
 import { Background } from './src/components/Background'
 import { AppointmentDetails } from './src/screens/AppointmentDetails'
+import { AuthProvider } from './src/hooks/auth'
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -30,8 +31,9 @@ export default function App() {
         translucent
       />
 
-      <Routes />
-      {/* <AppointmentDetails /> */}
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
     </Background>
   )
 }

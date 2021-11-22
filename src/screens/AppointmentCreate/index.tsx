@@ -30,7 +30,7 @@ export function AppointmentCreate() {
   const [guild, setGuild] = useState<GuildProps>({} as GuildProps)
 
   function handleOpenGuilds() {
-    setOpenGuildsModal(true)
+    setOpenGuildsModal(openGuildsModal !== true)
   }
 
   function handleGuildSelect(guildSelect: GuildProps) {
@@ -38,8 +38,8 @@ export function AppointmentCreate() {
     setOpenGuildsModal(false)
   }
 
-  function handleCloseModal() {
-    setOpenGuildsModal(false)
+  function handleCategorySelect(category_id: string) {
+    setCategory(category_id)
   }
 
   return (
@@ -62,7 +62,7 @@ export function AppointmentCreate() {
 
           <CategorySelect
             check_box
-            setCategory={setCategory}
+            setCategory={handleCategorySelect}
             categorySelected={category}
           />
 
@@ -126,7 +126,7 @@ export function AppointmentCreate() {
         </ScrollView>
 
         <TouchableWithoutFeedback>
-          <ModalView visible={openGuildsModal} closeModal={handleCloseModal}>
+          <ModalView visible={openGuildsModal} closeModal={handleOpenGuilds}>
             <Guilds handleGuildSelected={handleGuildSelect} />
           </ModalView>
         </TouchableWithoutFeedback>

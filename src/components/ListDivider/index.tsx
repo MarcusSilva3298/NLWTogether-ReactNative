@@ -3,6 +3,17 @@ import { View } from 'react-native'
 
 import { styles } from './styles'
 
-export function ListDivider() {
-  return <View style={styles.container} />
+interface Props {
+  isCentered?: boolean
+}
+
+export function ListDivider({ isCentered = false }: Props) {
+  return (
+    <View
+      style={[
+        styles.container,
+        isCentered === true ? { width: '74%' } : { width: '78%' }
+      ]}
+    />
+  )
 }

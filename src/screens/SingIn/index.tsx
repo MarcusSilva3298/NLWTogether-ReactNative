@@ -6,9 +6,11 @@ import { ButtonIcon } from '../../components/ButtonIcon'
 
 import IllustrationImg from '../../assets/illustration.png'
 import { styles } from './styles'
+import { useAuth } from '../../hooks/auth'
 
 export function SingIn() {
   const navigation = useNavigation()
+  const { user } = useAuth()
 
   return (
     <View style={styles.container}>

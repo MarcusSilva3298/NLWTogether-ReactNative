@@ -36,7 +36,7 @@ export function Home() {
         icon: null,
         owner: false
       },
-      category: '1',
+      category: '2',
       date: '23/06 às 20:40h',
       description: 'CSzinho de leve'
     },
@@ -48,7 +48,7 @@ export function Home() {
         icon: null,
         owner: false
       },
-      category: '1',
+      category: '3',
       date: '24/06 às 23:40h',
       description: 'Hammerizou'
     },
@@ -84,7 +84,7 @@ export function Home() {
         icon: null,
         owner: false
       },
-      category: '1',
+      category: '3',
       date: '32/06 às 20:40h',
       description: 'Wind of Change'
     },
@@ -96,7 +96,7 @@ export function Home() {
         icon: null,
         owner: false
       },
-      category: '1',
+      category: '4',
       date: '19/06 às 21:40h',
       description: 'Farm de Dr4c0s'
     }
@@ -126,7 +126,10 @@ export function Home() {
         </View>
 
         <View style={styles.content}>
-          <ListHeader title="Partidas agendadas" subtitle="Total 6" />
+          <ListHeader
+            title="Partidas agendadas"
+            subtitle={`Total ${appointments.length}`}
+          />
         </View>
 
         <FlatList

@@ -5,7 +5,7 @@ import { styles } from './styles'
 
 export function GuildIcon() {
   const uri =
-    'https://w7.pngwing.com/pngs/942/98/png-transparent-discord-computer-icons-teamspeak-computer-servers-others-miscellaneous-blue-smiley.png'
+    'https://i.pinimg.com/564x/b8/52/5c/b8525c0627e8da7f96b4a3153e48e7fa.jpg'
 
   return <Image source={{ uri }} style={styles.image} resizeMode="cover" />
 }

@@ -30,7 +30,8 @@ export const styles = StyleSheet.create({
   },
   selectBody: {
     flex: 1,
-    alignItems: 'center'
+    alignItems: 'center',
+    paddingTop: 10
   },
   image: {
     width: 64,
