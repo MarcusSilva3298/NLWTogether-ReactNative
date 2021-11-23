@@ -1,10 +1,9 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 
-import { Home } from '../screens/Home'
-import { SingIn } from '../screens/SingIn'
-
 import { theme } from '../global/styles/theme'
+
+import { Home } from '../screens/Home'
 import { AppointmentDetails } from '../screens/AppointmentDetails'
 import { AppointmentCreate } from '../screens/AppointmentCreate'
 
@@ -18,7 +17,6 @@ export function AuthRoutes() {
         cardStyle: { backgroundColor: theme.colors.secondary80 }
       }}
     >
-      <Screen name="SingIn" key="SingIn" component={SingIn} />
       <Screen name="Home" key="Home" component={Home} />
       <Screen
         name="AppointmentDetails"

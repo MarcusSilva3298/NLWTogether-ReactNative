@@ -25,7 +25,12 @@
         "no-use-before-define": "off",
         "@typescript-eslint/no-use-before-define": ["error"],
         "react/jsx-filename-extension": "off",
-        "prettier/prettier": "error",
+        "prettier/prettier": ["error", {
+            "semi": false,
+            "singleQuote": true,
+            "trailingComma": "none",
+            "bracketSpacing": true
+        }],
         "import/extensions": [
           "error",
           "ignorePackages",
