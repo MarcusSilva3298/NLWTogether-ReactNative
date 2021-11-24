@@ -4,16 +4,13 @@ import { View } from 'react-native'
 import { styles } from './styles'
 
 interface Props {
-  isCentered?: boolean
+  width?: string
 }
 
-export function ListDivider({ isCentered = false }: Props) {
+export function ListDivider({ width = '0' }: Props) {
   return (
     <View
-      style={[
-        styles.container,
-        isCentered === true ? { width: '74%' } : { width: '78%' }
-      ]}
+      style={[styles.container, width === '0' ? { width: '74%' } : { width }]}
     />
   )
 }

@@ -9,8 +9,6 @@ import { styles } from './styles'
 export function Profile() {
   const { user } = useAuth()
 
-  console.log(user)
-
   return (
     <View style={styles.container}>
       <Avatar urlImage={user.avatar} />

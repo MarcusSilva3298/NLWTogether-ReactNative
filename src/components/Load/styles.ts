@@ -3,15 +3,8 @@ import { theme } from '../../global/styles/theme'
 
 export const styles = StyleSheet.create({
   container: {
-    width: 63,
-    height: 67,
-    borderRadius: 8,
-    alignItems: 'center',
+    flex: 1,
     justifyContent: 'center',
-    overflow: 'hidden'
-  },
-  image: {
-    width: 63,
-    height: 67
+    alignItems: 'center'
   }
 })

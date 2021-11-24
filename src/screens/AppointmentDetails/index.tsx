@@ -4,6 +4,7 @@ import { Fontisto } from '@expo/vector-icons'
 import { FlatList, ImageBackground, Text, View } from 'react-native'
 import { BorderlessButton } from 'react-native-gesture-handler'
 
+import { useRoute } from '@react-navigation/native'
 import { Background } from '../../components/Background'
 import { Header } from '../../components/Header'
 
@@ -14,8 +15,16 @@ import { ListHeader } from '../../components/ListHeader'
 import { Member } from '../../components/Member'
 import { ListDivider } from '../../components/ListDivider'
 import { ButtonIcon } from '../../components/ButtonIcon'
+import { AppointmentProps } from '../../components/Appointment'
+
+interface Params {
+  guildSelected: AppointmentProps
+}
 
 export function AppointmentDetails() {
+  const route = useRoute()
+  const { guildSelected } = route.params as Params
+
   const members = [
     {
       id: '1',
@@ -44,10 +53,8 @@ export function AppointmentDetails() {
 
       <ImageBackground source={BannerImg} style={styles.banner}>
         <View style={styles.bannerContent}>
-          <Text style={styles.title}>Lendários</Text>
-          <Text style={styles.subtitle}>
-            É hoje que vamos chegar ao challenger sem perder uma partida da md10
-          </Text>
+          <Text style={styles.title}>{guildSelected.guild.name}</Text>
+          <Text style={styles.subtitle}>{guildSelected.description}</Text>
         </View>
       </ImageBackground>
 
@@ -57,7 +64,7 @@ export function AppointmentDetails() {
         data={members}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => <Member data={item} />}
-        ItemSeparatorComponent={() => <ListDivider />}
+        ItemSeparatorComponent={() => <ListDivider width="82%" />}
         style={styles.members}
       />
 

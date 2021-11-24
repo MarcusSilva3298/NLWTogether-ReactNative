@@ -32,7 +32,7 @@ export function Guild({ data, ...rest }: Props) {
         style={styles.guildIcon}
         colors={[secondary50, secondary70]}
       >
-        <GuildIcon />
+        <GuildIcon guildId={data.id} iconId={data.icon} />
       </LinearGradient>
 
       <View style={styles.content}>

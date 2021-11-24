@@ -1,5 +1,5 @@
 import React from 'react'
-import { createStackNavigator } from '@react-navigation/stack'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import { theme } from '../global/styles/theme'
 
@@ -7,27 +7,26 @@ import { Home } from '../screens/Home'
 import { AppointmentDetails } from '../screens/AppointmentDetails'
 import { AppointmentCreate } from '../screens/AppointmentCreate'
 
-const { Navigator, Screen } = createStackNavigator()
+const Stack = createNativeStackNavigator()
 
-export function AuthRoutes() {
+export function AppRoutes() {
   return (
-    <Navigator
+    <Stack.Navigator
       screenOptions={{
-        headerShown: false,
-        cardStyle: { backgroundColor: theme.colors.secondary80 }
+        headerShown: false
       }}
     >
-      <Screen name="Home" key="Home" component={Home} />
-      <Screen
+      <Stack.Screen name="Home" key="Home" component={Home} />
+      <Stack.Screen
         name="AppointmentDetails"
         key="AppointmentDetails"
         component={AppointmentDetails}
       />
-      <Screen
+      <Stack.Screen
         name="AppointmentCreate"
         key="AppointmentCreate"
         component={AppointmentCreate}
       />
-    </Navigator>
+    </Stack.Navigator>
   )
 }
